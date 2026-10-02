@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tokimeite Nabi</string>
+    <string name="welcome_message">Your Android app is ready for Google Play release builds.</string>
+    <string name="action_label">Launch</string>
+</resources>
