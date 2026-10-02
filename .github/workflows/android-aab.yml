@@ -1,0 +1,53 @@
+name: Android AAB
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bundle-release:
+    name: Build release AAB
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android SDK packages
+        run: sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build release bundle
+        run: bash ./gradlew --no-daemon bundleRelease
+
+      - name: Upload release AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: tokimeite-nabi-release-aab
+          path: app/build/outputs/bundle/release/*.aab
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Add build details to run summary
+        run: |
+          {
+            echo "## Android App Bundle"
+            echo
+            echo "- Application ID: \`com.kenjkenta0813sketch.tokimeitenabi\`"
+            echo "- Artifact: \`tokimeite-nabi-release-aab\`"
+            echo "- Signing: This bundle is unsigned; no release signing key or signing configuration is present."
+            echo "- Download the AAB from the **Artifacts** section at the bottom of this workflow run."
+          } >> "$GITHUB_STEP_SUMMARY"
