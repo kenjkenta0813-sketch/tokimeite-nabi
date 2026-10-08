@@ -1,5 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tokimeite Nabi</string>
-    <string name="welcome_message">Your Android app is ready for Google Play release builds.</string>
-    <string name="action_label">Launch</string>
+    <string name="app_name">女性の街ときめいてナビ</string>
+    <string name="home_eyebrow">今日のおでかけ先を見つけよう</string>
+    <string name="home_subtitle">気になる場所を探して、Google マップでチェック。</string>
+    <string name="search_title">どこへ行きたい？</string>
+    <string name="search_hint">場所・エリア・お店の名前</string>
+    <string name="search_button">マップで検索</string>
+    <string name="categories_title">気分で探す</string>
+    <string name="category_cafe">カフェ</string>
+    <string name="category_shopping">雑貨・ショッピング</string>
+    <string name="category_park">公園</string>
+    <string name="category_museum">美術館</string>
+    <string name="suggestions_title">おでかけのヒント</string>
+    <string name="suggestion_omotesando_title">表参道のおしゃれカフェ</string>
+    <string name="suggestion_omotesando_description">落ち着いたカフェで、ゆっくり過ごしたい日に。</string>
+    <string name="suggestion_kamakura_title">鎌倉の海が見えるカフェ</string>
+    <string name="suggestion_kamakura_description">海辺を散歩しながら、景色のいいお店を探そう。</string>
+    <string name="suggestion_kyoto_title">京都の和カフェ</string>
+    <string name="suggestion_kyoto_description">街歩きの途中に立ち寄りたい、くつろぎスポット。</string>
+    <string name="open_suggestion">Google マップで見る</string>
+    <string name="search_empty_message">場所やお店の名前を入力してください。</string>
+    <string name="maps_unavailable_message">地図アプリを開けませんでした。Google マップをインストールしてください。</string>
 </resources>
