@@ -10,8 +10,8 @@ android {
     defaultConfig {
         applicationId = "com.kenkenta.tokimeite_navi"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 12
+        targetSdk = 36
+        versionCode = 13
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
