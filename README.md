@@ -1,12 +1,14 @@
 # 女性の街ときめいてナビ
 
-「女性の街ときめいてナビ」は、日本語のネイティブ Android アプリです。行きたい場所やお店を検索したり、カフェ・雑貨・公園・美術館のカテゴリやおすすめから行き先を見つけて、Google マップなどの対応地図アプリで開けます。検索には Android の `ACTION_VIEW` と `geo:` URI を使うため、Maps API キーや追加の地図 SDK は不要です。
+「女性の街ときめいてナビ」は、日本語のネイティブ Android アプリです。都道府県、市区町村、ジャンルを順番に選んで、キーボードを使わずに行き先を探せます。検索結果と車での道案内は Google マップで開き、お気に入りは端末内に保存できます。任意の場所・お店の名前を追加して検索することもできます。
+
+市区町村データは [nojimage/local-gov-code-jp](https://github.com/nojimage/local-gov-code-jp) が総務省の全国地方公共団体コードを基に公開しているデータ（令和6年1月1日現在）を使用しています。47都道府県、1,747市区町村をアプリ内に同梱し、オフラインで選択できます。データは同リポジトリの MIT License に基づいて利用し、ライセンス本文を `app/src/main/assets/LICENSE-local-gov-code-jp.txt` に収録しています。
 
 ## 開発環境
 
 - Android Studio
 - JDK 17
-- Android SDK Platform 34（compileSdk / targetSdk）
+- Android SDK Platform 36（compileSdk / targetSdk）
 - Gradle Wrapper（Gradle 8.7 を自動ダウンロード）
 
 Android Studio でこのリポジトリを開き、必要な Android SDK をインストールして同期してください。コマンドラインでは Gradle を別途インストールせず、リポジトリの Wrapper を実行します。
