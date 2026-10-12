@@ -8,10 +8,10 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.kenjkenta0813sketch.tokimeitenabi"
+        applicationId = "com.kenkenta.tokimeite_navi"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
+        versionCode = 12
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
