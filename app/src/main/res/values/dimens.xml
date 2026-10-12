@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="favorite_card_corner_radius">14dp</dimen>
+    <dimen name="favorite_card_elevation">1dp</dimen>
+    <dimen name="favorite_card_stroke_width">1dp</dimen>
+    <dimen name="favorite_card_spacing">10dp</dimen>
+    <dimen name="favorite_card_padding">14dp</dimen>
+    <dimen name="favorite_action_spacing">4dp</dimen>
+</resources>

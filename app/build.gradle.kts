@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.kenjkenta0813sketch.tokimeitenabi"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.kenkenta.tokimeite_navi"
