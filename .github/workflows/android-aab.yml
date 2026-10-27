@@ -33,7 +33,24 @@ jobs:
       - name: Build release bundle
         run: bash ./gradlew --no-daemon bundleRelease
 
-      - name: Upload release AAB
+     
+
+            - name: Restore keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > tokimeitenabi.jks
+
+      - name: Sign release AAB
+        run: |
+          jarsigner -verbose \
+            -sigalg SHA256withRSA \
+            -digestalg SHA-256 \
+            -keystore tokimeitenabi.jks \
+            -storepass "${{ secrets.KEYSTORE_PASSWORD }}" \
+            -keypass "${{ secrets.KEY_PASSWORD }}" \
+            app/build/outputs/bundle/release/app-release.aab \
+            "${{ secrets.KEY_ALIAS }}"
+       
+              - name: Upload release AAB
         uses: actions/upload-artifact@v4
         with:
           name: tokimeite-nabi-release-aab
