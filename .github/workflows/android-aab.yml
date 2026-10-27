@@ -35,7 +35,7 @@ jobs:
 
      
 
-            - name: Restore keystore
+      - name: Restore keystore
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > tokimeitenabi.jks
 
