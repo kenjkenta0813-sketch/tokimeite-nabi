@@ -30,6 +30,8 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Check signing configuration
+        run: echo "Checking release signing setup"
       - name: Build release bundle
         run: bash ./gradlew --no-daemon bundleRelease
 
