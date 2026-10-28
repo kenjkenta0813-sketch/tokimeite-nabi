@@ -50,9 +50,9 @@ jobs:
             app/build/outputs/bundle/release/app-release.aab \
             "${{ secrets.KEY_ALIAS }}"
        
-              - name: Upload release AAB
-        uses: actions/upload-artifact@v4
-        with:
+                - name: Upload release AAB
+          uses: actions/upload-artifact@v4
+          with:
           name: tokimeite-nabi-release-aab
           path: app/build/outputs/bundle/release/*.aab
           if-no-files-found: error
