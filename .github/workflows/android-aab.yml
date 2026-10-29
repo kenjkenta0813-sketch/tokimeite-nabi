@@ -45,7 +45,16 @@ jobs:
           KEYSTORE_PATH: ${{ github.workspace }}/tokimeitenabi.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-      - name: Upload release AAB
+      
+      - name: Sign release AAB
+        run: |
+          jarsigner -keystore "$KEYSTORE_PATH" -storepass "$KEYSTORE_PASSWORD" -keypass "$KEY_PASSWORD" app/build/outputs/bundle/release/app-release.aab key0
+          jarsigner -verify app/build/outputs/bundle/release/app-release.aab
+        env:
+          KEYSTORE_PATH: ${{ github.workspace }}/tokimeitenabi.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+       - name: Upload release AAB
         uses: actions/upload-artifact@v4
         with:
           name: tokimeite-nabi-release-aab
