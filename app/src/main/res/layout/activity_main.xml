@@ -18,7 +18,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:adjustViewBounds="true"
-    android:src="@drawable/a_bright_colorful_feminine_app_style_poster_inte"
+    android:src="@drawable/tokimeite_top"
     android:contentDescription="女性の街 ときめいてナビ トップ画像" />
         <TextView
             android:layout_width="wrap_content"
