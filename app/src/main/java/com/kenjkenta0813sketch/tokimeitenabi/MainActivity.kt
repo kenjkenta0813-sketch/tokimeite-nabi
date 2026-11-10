@@ -50,7 +50,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        findViewById<android.widget.ImageView>(R.id.top_image).setOnClickListener {
+        findViewById<android.widget.ScrollView>(R.id.main_scroll).post {
+        findViewById<android.widget.ScrollView>(R.id.main_scroll).smoothScrollTo(0, 900)
+    }
+}
         prefectureSpinner = findViewById(R.id.prefecture_spinner)
         municipalitySpinner = findViewById(R.id.municipality_spinner)
         genreGroup = findViewById(R.id.genre_group)
