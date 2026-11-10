@@ -19,6 +19,9 @@
     android:layout_height="wrap_content"
     android:adjustViewBounds="true"
     android:src="@drawable/tokimeite_top"
+    android:id="@+id/top_image"
+android:clickable="true"
+android:focusable="true"
     android:contentDescription="女性の街 ときめいてナビ トップ画像" />
         <TextView
             android:layout_width="wrap_content"
