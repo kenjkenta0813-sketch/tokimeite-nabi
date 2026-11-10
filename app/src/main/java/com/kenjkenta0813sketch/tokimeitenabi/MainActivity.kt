@@ -52,7 +52,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         findViewById<android.widget.ImageView>(R.id.top_image).setOnClickListener {
         findViewById<android.widget.ScrollView>(R.id.main_scroll).post {
-        findViewById<android.widget.ScrollView>(R.id.main_scroll).smoothScrollTo(0, 900)
+        findViewById<android.widget.ScrollView>(R.id.main_scroll)
+            .smoothScrollTo(0, 900)
     }
 }
         prefectureSpinner = findViewById(R.id.prefecture_spinner)
