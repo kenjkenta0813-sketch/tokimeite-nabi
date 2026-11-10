@@ -51,10 +51,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<android.widget.ImageView>(R.id.top_image).setOnClickListener {
-        findViewById<android.widget.ScrollView>(R.id.main_scroll).post {
-        findViewById<android.widget.ScrollView>(R.id.main_scroll)
-            .smoothScrollTo(0, 900)
+        
+    if (event.action == android.view.MotionEvent.ACTION_UP) {
+        val y = event.y / view.height
+        val scroll = findViewById<android.widget.ScrollView>(R.id.main_scroll)
+        when {
+            y in 0.24f..0.35f -> scroll.smoothScrollTo(0, 900)
+            y in 0.35f..0.46f -> scroll.smoothScrollTo(0, 1100)
+            y in 0.46f..0.57f -> scroll.smoothScrollTo(0, 1400)
+        }
+        view.performClick()
     }
+    true
 }
         prefectureSpinner = findViewById(R.id.prefecture_spinner)
         municipalitySpinner = findViewById(R.id.municipality_spinner)
