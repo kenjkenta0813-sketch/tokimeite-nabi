@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        findViewById<android.widget.ImageView>(R.id.top_image).setOnClickListener {
+        findViewById<android.widget.ImageView>(R.id.top_image).setOnTouchListener {view, event ->
         
     if (event.action == android.view.MotionEvent.ACTION_UP) {
         val y = event.y / view.height
