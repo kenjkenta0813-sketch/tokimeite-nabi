@@ -51,20 +51,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
       
-findViewById<android.widget.ImageView>(R.id.top_image).setOnTouchListener { view, event ->
-    if (event.action == android.view.MotionEvent.ACTION_UP) {
-        val y = event.y / view.height
-        val scroll = findViewById<android.widget.ScrollView>(R.id.main_scroll)
 
-        when {
-            y in 0.24f..0.35f -> scroll.smoothScrollTo(0, 900)
-            y in 0.35f..0.46f -> scroll.smoothScrollTo(0, 1100)
-            y in 0.46f..0.57f -> scroll.smoothScrollTo(0, 1400)
-        }
-        view.performClick()
+findViewById<android.widget.ImageView>(R.id.top_image).setOnClickListener {
+    val scroll = findViewById<android.widget.ScrollView>(R.id.main_scroll)
+    val target = findViewById<android.view.View>(R.id.municipality_spinner)
+    scroll.post {
+        val location = android.graphics.Rect()
+        target.getDrawingRect(location)
+        scroll.offsetDescendantRectToMyCoords(target, location)
+        scroll.smoothScrollTo(0, location.top)
     }
-    true
 }
+
 
         municipalitySpinner = findViewById(R.id.municipality_spinner)
         genreGroup = findViewById(R.id.genre_group)
