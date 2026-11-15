@@ -8,7 +8,7 @@ android {
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.kenkenta.tokimeite_navi"
+        applicationId = "com.kenkenta.tokimeite_navi_free"
         minSdk = 24
         targetSdk = 36
 
