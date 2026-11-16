@@ -24,7 +24,12 @@ enum class PlaceGenre(val label: String, val searchTerm: String) {
     PARK("公園", "公園"),
     HOT_SPRING("温泉", "温泉"),
     SHOPPING("ショッピング", "ショッピング"),
-    CAFE("カフェ", "カフェ")
+    CAFE("カフェ", "カフェ"),
+    BEAUTY("美容・エステ", "美容 エステ"),
+    HOTEL("ホテル・宿泊", "ホテル 宿泊"),
+    EVENT("イベント", "イベント"),
+    RECOMMENDED("おすすめ", "人気スポット")
+
 }
 
 data class MunicipalityCatalog(
