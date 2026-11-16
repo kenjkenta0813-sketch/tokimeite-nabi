@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
 findViewById<android.widget.ImageView>(R.id.top_image).setOnClickListener {
     val scroll = findViewById<android.widget.ScrollView>(R.id.main_scroll)
-    val target = findViewById<android.view.View>(R.id.municipality_spinner)
+    val target = findViewById<android.view.View>(R.id.prefecture_spinner)
     scroll.post {
         val location = android.graphics.Rect()
         target.getDrawingRect(location)
