@@ -43,7 +43,13 @@ class MainActivity : AppCompatActivity() {
             R.id.genre_park to PlaceGenre.PARK,
             R.id.genre_hot_spring to PlaceGenre.HOT_SPRING,
             R.id.genre_shopping to PlaceGenre.SHOPPING,
-            R.id.genre_cafe to PlaceGenre.CAFE
+            R.id.genre_cafe to PlaceGenre.CAFE,
+            
+R.id.genre_beauty to PlaceGenre.BEAUTY,
+R.id.genre_hotel to PlaceGenre.HOTEL,
+R.id.genre_event to PlaceGenre.EVENT,
+R.id.genre_recommended to PlaceGenre.RECOMMENDED
+
         )
     }
 
