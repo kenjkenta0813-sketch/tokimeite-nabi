@@ -64,6 +64,7 @@ findViewById<android.widget.ImageView>(R.id.top_image).setOnClickListener {
 }
 
 
+        prefectureSpinner = findViewById(R.id.prefecture_spinner)
         municipalitySpinner = findViewById(R.id.municipality_spinner)
         genreGroup = findViewById(R.id.genre_group)
         keywordInput = findViewById(R.id.keyword_input)
