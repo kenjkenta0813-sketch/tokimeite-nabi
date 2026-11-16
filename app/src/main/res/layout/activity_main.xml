@@ -181,6 +181,39 @@ android:focusable="true"
                         android:layout_height="wrap_content"
                         android:checkable="true"
                         android:text="@string/genre_cafe" />
+                
+                     <com.google.android.material.chip.Chip
+                        android:id="@+id/genre_beauty"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="美容・エステ" />
+
+                      <com.google.android.material.chip.Chip
+                       android:id="@+id/genre_hotel"
+                       style="@style/Widget.MaterialComponents.Chip.Choice"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:checkable="true"
+                       android:text="ホテル・宿泊" />
+
+                     <com.google.android.material.chip.Chip
+                       android:id="@+id/genre_event"
+                       style="@style/Widget.MaterialComponents.Chip.Choice"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:checkable="true"
+                       android:text="イベント" />
+
+                    <com.google.android.material.chip.Chip
+                       android:id="@+id/genre_recommended"
+                       style="@style/Widget.MaterialComponents.Chip.Choice"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:checkable="true"
+                       android:text="おすすめ" />
+
                 </com.google.android.material.chip.ChipGroup>
 
                 <EditText
