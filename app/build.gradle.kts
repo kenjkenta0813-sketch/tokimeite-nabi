@@ -14,7 +14,7 @@ android {
 
         
 
-        versionCode = 17
+        versionCode = 18
 
         versionName = "1.0"
 
