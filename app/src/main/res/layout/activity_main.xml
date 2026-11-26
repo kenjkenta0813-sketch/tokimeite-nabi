@@ -15,7 +15,14 @@
         android:paddingTop="24dp"
         android:paddingEnd="20dp"
         android:paddingBottom="32dp">
-<ImageView
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="有料版・広告なし"
+    android:textColor="#C2185B"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:gravity="center" /><ImageView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:adjustViewBounds="true"
