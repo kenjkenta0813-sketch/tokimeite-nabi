@@ -51,7 +51,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
                 com.google.android.gms.ads.MobileAds.initialize(this) {}
-
+        val adView = com.google.android.gms.ads.AdView(this)
+        adView.setAdSize(com.google.android.gms.ads.AdSize.BANNER)
+        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+                addContentView(adView, android.widget.FrameLayout.LayoutParams(
+            -1, -2, android.view.Gravity.BOTTOM
+        ))
        prefectureSpinner = findViewById(R.id.prefecture_spinner)
         municipalitySpinner = findViewById(R.id.municipality_spinner)
         genreGroup = findViewById(R.id.genre_group)
